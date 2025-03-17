@@ -6,7 +6,7 @@
 
 # Install
 ```shell
-pip install json-env-sln==1.0.7
+pip install json-env-sln==1.0.8
 ```
 # Example
 ## Use case
