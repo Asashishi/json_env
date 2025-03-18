@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="json_env",
-    version="1.0.7",
+    version="1.0.9",
     author="Asashishi_Nyan!",
     author_email="1072903224@qq.com",
     description="This is a simple environment variable solution for .json file, which is based on 'os' and 'json' lib\n. Use this lib and you don't need to worry about type issues with 'os.environ' it's all handled by this package.",
