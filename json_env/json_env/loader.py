@@ -8,7 +8,7 @@ def load_env(env_path: str) -> None:
             data: dict[str, JsonVar] = json.load(env_file)
         for key, val in data.items():
             if type(val) == str:
-                os.environ[key] = f'"{val}"'
+                os.environ[key] = json.dumps(val)
                 continue
             os.environ[key] = str(val)
     except Exception as error:
