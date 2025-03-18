@@ -1,4 +1,4 @@
-# Introduce json_env
+# Introduce
 - This pak opened base on MIT Licence
 - This is a simple environment variable solution for .json file
 - It's based on 'os' and 'json' libs
@@ -6,7 +6,7 @@
 
 # Install
 ```shell
-pip install json-env-sln==1.0.8
+pip install json-env-sln==1.0.9
 ```
 # Example
 ## Use case
