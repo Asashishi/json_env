@@ -13,17 +13,15 @@ set_env(key: str, val: JsonVar | Any)
 ```python
 show_all()
 ```
-# What's new 1.1.5
-- All bug fix
-# What's new 1.1.7
-- Update Doc
+# What's new 1.1.9
+- Improve performance
 
 # Install
 ```shell
 pip install json-env-sln
 ```
 # Example
-## test case
+## test json file
 ```json
 {
   "str": "Asashishi",
@@ -71,7 +69,7 @@ pip install json-env-sln
 }
 ```
 ## Use
-- Test case
+### Test case
 ```python
 import os
 import time
@@ -82,7 +80,7 @@ start: float = time.time()
 # load env from json file
 load_env(os.path.join(os.getcwd(),"env.json"))
 
-# get
+# log the variables and variable's type
 print(get_env("str"), type(get_env("str")))
 print(get_env("bool_str"), type(get_env("bool_str")))
 print(get_env("int_str"), type(get_env("int_str")))
@@ -107,7 +105,6 @@ for key, val in json_object.items():
 print("="*120)
 print("="*120)
 
-# set then get
 set_env("set_str", get_env("str"))
 print(get_env("set_str"), type(get_env("set_str")))
 set_env("set_bool_str", "true")
@@ -140,8 +137,8 @@ set_json_object: dict = get_env("set_object")
 for key, val in set_json_object.items():
     print(type(val))
 
-print("="*240)
-print("="*240)
+print("="*120)
+print("="*120)
 
 # show all
 show_all()
@@ -237,5 +234,5 @@ key: set_float, val: 1.07, type: <class 'float'>
 key: set_array, val: ['Asashishi', 'true', '107', '1.07', 'null', None, False, 107, 1.07], type: <class 'list'>
 key: set_object, val: {'str': 'Asashishi', 'bool_str': 'true', 'int_str': '107', 'float_str': '1.07', 'none_str': 'null', 'none': None, 'bool': False, 'int': 107, 'float': 1.07, 'array': ['Asashishi', 'true', '107', '1.07', 'null', None, False, 107, 1.07]}, type: <class 'dict'>
 
-Test total time cost: 0.0016565322875976562s
+Test total time cost: 0.0015146732330322266s
 ```
