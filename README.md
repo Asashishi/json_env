@@ -20,8 +20,9 @@ show_all()
 ```shell
 pip install json-env-sln
 ```
+
 # Example
-## test json file
+## Test json file
 ```json
 {
   "str": "Asashishi",
@@ -236,3 +237,13 @@ key: set_object, val: {'str': 'Asashishi', 'bool_str': 'true', 'int_str': '107',
 
 Test total time cost: 0.0015146732330322266s
 ```
+
+
+
+
+
+# Option Time Level
+- load_env() level: ms
+- set_env() level: μs
+- get_env() level: μs
+- show_all() level: ms
